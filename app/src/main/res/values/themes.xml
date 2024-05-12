@@ -6,4 +6,16 @@
     </style>
 
     <style name="Theme.SearchITSpecialists" parent="Base.Theme.SearchITSpecialists" />
+    <style name="colored_checkbox" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="RoundedOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">196dp</item>
+    </style>
+    <style name="RoundedCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item> <!-- Установите радиус скругления в соответствии с вашими предпочтениями -->
+    </style>
 </resources>

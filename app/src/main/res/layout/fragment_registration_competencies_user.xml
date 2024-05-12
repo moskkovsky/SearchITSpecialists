@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/imageView_comp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@android:color/transparent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/back_1" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/tvCompetenciesInfoUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alata"
+            android:padding="20dp"
+            android:text="Компетенции"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView_comp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="10dp"
+            android:text="Способен осуществлять поиск, критический анализ и синтез информации, применять системный подход для решения поставленных задач"
+            android:textSize="18sp"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCompetenciesInfoUser"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/gray_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_1" />
+
+        <CheckBox
+            android:id="@+id/checkbox_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="10dp"
+            android:text="Способен определять круг задач в рамках поставленной цели и выбирать оптимальные способы их решения, исходя из действующих правовых норм, имеющихся ресурсов и ограничений"
+            android:textSize="18sp"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_1"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/gray_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_2" />
+
+        <CheckBox
+            android:id="@+id/checkbox_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="10dp"
+            android:text="Способен осуществлять социальное взаимодействие и реализовывать свою роль в команде"
+            android:textSize="18sp"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_2"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/gray_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_3" />
+
+        <CheckBox
+            android:id="@+id/checkbox_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="10dp"
+            android:text="Способен осуществлять деловую коммуникацию в устной и письменной формах на государственном языке Российской Федерации и иностранном(ых) языке(ах)"
+            android:textSize="18sp"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_3"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/gray_4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_4" />
+
+        <CheckBox
+            android:id="@+id/checkbox_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="10dp"
+            android:text="Способен воспринимать межкультурное разнообразие общества в социально-историческом, этическом и философском контекстах"
+            android:textSize="18sp"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_4"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/gray_5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_5" />
+
+        <CheckBox
+            android:id="@+id/checkbox_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="10dp"
+            android:text="Способен управлять своим временем, выстраивать и реализовывать траекторию саморазвития"
+            android:textSize="18sp"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_5"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/gray_6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_6" />
+
+        <CheckBox
+            android:id="@+id/checkbox_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="10dp"
+            android:text="Способен управлять своим временем, выстраивать и реализовывать траекторию саморазвития"
+            android:textSize="18sp"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintBottom_toTopOf="@id/btNextCompetenciesUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_6"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btNextCompetenciesUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#17F1D7"
+            android:fontFamily="sans-serif-medium"
+            android:text="Сохранить все данные"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_7" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
