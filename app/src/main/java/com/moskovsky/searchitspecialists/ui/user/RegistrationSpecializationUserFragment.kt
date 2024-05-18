@@ -23,17 +23,17 @@ class RegistrationSpecializationUserFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showRegistrationCompetenciesUserFragment()
+        showRegistrationStackUserFragment()
     }
 
-    // Компетенции
-    private fun showRegistrationCompetenciesUserFragment() {
+    // Stack
+    private fun showRegistrationStackUserFragment() {
         binding.btNextInRegSpecializationUser.setOnClickListener {
-            launchRegistrationCompetenciesUserFragment()
+            launchRegistrationStackUserFragment()
         }
     }
 
-    private fun launchRegistrationCompetenciesUserFragment() {
+    private fun launchRegistrationStackUserFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
             .setCustomAnimations(
                 R.anim.slide_in_right,
@@ -41,7 +41,7 @@ class RegistrationSpecializationUserFragment : Fragment() {
                 R.anim.slide_in_left,
                 R.anim.slide_out_right
             )
-            .replace(R.id.main_container, RegistrationCompetenciesUserFragment.newInstance())
+            .replace(R.id.main_container, RegistrationStackUserFragment.newInstance())
             .commit()
     }
 

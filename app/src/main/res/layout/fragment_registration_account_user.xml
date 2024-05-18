@@ -15,7 +15,9 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@android:color/transparent"
             tools:ignore="MissingConstraints">
 
@@ -129,7 +131,9 @@
             android:backgroundTint="#17F1D7"
             android:fontFamily="sans-serif-medium"
             android:text="@string/button_info_next"
+            android:textColor="@color/white"
             android:textSize="20sp"
+            android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -4,30 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.app.FavoriteSpecialistsFragment">
+    tools:context=".ui.app.CategoriesFragment">
 
-
-    <TextView
-        android:id="@+id/tvLikeNews"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchNews"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:padding="20dp"
-        android:text="@string/textView_like_news"
-        android:textColor="@color/black"
-        android:textSize="30sp"
+        android:layout_marginTop="4dp"
+        app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="Search here ..." />
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvLikePriceList"
+        android:id="@+id/rvCategories"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="4dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvLikeNews" />
+        app:layout_constraintTop_toBottomOf="@id/searchNews"
+        tools:listitem="@layout/item_categories_info" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

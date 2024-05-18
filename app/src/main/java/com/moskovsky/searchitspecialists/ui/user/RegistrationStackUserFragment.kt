@@ -1,4 +1,4 @@
-package com.moskovsky.searchitspecialists.ui.hr
+package com.moskovsky.searchitspecialists.ui.user
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,35 +6,35 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.moskovsky.searchitspecialists.R
-import com.moskovsky.searchitspecialists.databinding.FragmentRegistrationAccountHRBinding
-import com.moskovsky.searchitspecialists.ui.app.ListITSpecialistsFragment
+import com.moskovsky.searchitspecialists.databinding.FragmentRegistrationStackUserBinding
 
-class RegistrationAccountHRFragment : Fragment() {
-    private var _binding: FragmentRegistrationAccountHRBinding? = null
-    private val binding: FragmentRegistrationAccountHRBinding
+
+class RegistrationStackUserFragment : Fragment() {
+    private var _binding: FragmentRegistrationStackUserBinding? = null
+    private val binding: FragmentRegistrationStackUserBinding
         get() = _binding ?: throw RuntimeException(FRAGMENT_ERROR)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentRegistrationAccountHRBinding.inflate(inflater, container, false)
+        _binding = FragmentRegistrationStackUserBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showListITSpecialistsFragment()
+        showRegistrationCompetenciesUserFragment()
     }
 
-    // Лист специалстов
-    private fun showListITSpecialistsFragment() {
-        binding.btNextInListItSpec.setOnClickListener {
-            launchListITSpecialistsFragment()
+    // Компетенции
+    private fun showRegistrationCompetenciesUserFragment() {
+        binding.btNextInRegSpecializationUser.setOnClickListener {
+            launchRegistrationCompetenciesUserFragment()
         }
     }
 
-    private fun launchListITSpecialistsFragment() {
+    private fun launchRegistrationCompetenciesUserFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
             .setCustomAnimations(
                 R.anim.slide_in_right,
@@ -42,7 +42,7 @@ class RegistrationAccountHRFragment : Fragment() {
                 R.anim.slide_in_left,
                 R.anim.slide_out_right
             )
-            .replace(R.id.main_container, ListITSpecialistsFragment.newInstance())
+            .replace(R.id.main_container, RegistrationCompetenciesUserFragment.newInstance())
             .commit()
     }
 
@@ -52,9 +52,9 @@ class RegistrationAccountHRFragment : Fragment() {
     }
 
     companion object {
-        private const val FRAGMENT_ERROR = "RegistrationAccountHRFragment is null"
+        private const val FRAGMENT_ERROR = "RegistrationStackUserFragment is null"
         fun newInstance(): Fragment {
-            return RegistrationAccountHRFragment()
+            return RegistrationStackUserFragment()
         }
     }
 }

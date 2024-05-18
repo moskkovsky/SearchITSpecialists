@@ -1,12 +1,13 @@
 package com.moskovsky.searchitspecialists.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.moskovsky.searchitspecialists.R
 import com.moskovsky.searchitspecialists.databinding.FragmentHomeBinding
+import com.moskovsky.searchitspecialists.ui.app.ListITSpecialistsFragment
 import com.moskovsky.searchitspecialists.ui.hr.RegistrationAccountHRFragment
 import com.moskovsky.searchitspecialists.ui.user.RegistrationAccountUserFragment
 
@@ -28,7 +29,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         showListITSpecialistsFragment()
         showRegisterUserFragment()
-      //  showRegistrationAccountHRFragment()
+        showRegistrationAccountHRFragment()
     }
 
     // Главный экран
@@ -69,7 +70,7 @@ class HomeFragment : Fragment() {
             .commit()
     }
 
-    /*
+
     // Экран регистрации HR
     private fun showRegistrationAccountHRFragment() {
         binding.btRegistrationAccountAsHR.setOnClickListener {
@@ -88,11 +89,6 @@ class HomeFragment : Fragment() {
             .replace(R.id.main_container, RegistrationAccountHRFragment.newInstance())
             .commit()
     }
-
-     */
-
-
-
 
 
     override fun onDestroyView() {

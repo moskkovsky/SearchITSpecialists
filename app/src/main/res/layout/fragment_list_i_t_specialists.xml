@@ -4,23 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ListITSpecialistsFragment">
+    tools:context=".ui.app.ListITSpecialistsFragment">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchNews"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:iconifiedByDefault="false"
+    <ImageView
+        android:id="@+id/icon_profile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:queryBackground="@android:color/transparent"
-        app:queryHint="Search here ..." />
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/profile_2"
+         />
 
+    <ImageView
+        android:id="@+id/icon_app"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/brain_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleBeforeTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/varela"
+        android:text="CodeCareer"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/icon_app"
+        app:layout_constraintStart_toEndOf="@id/icon_app"
+        app:layout_constraintTop_toTopOf="@id/icon_app"
+        app:layout_constraintVertical_bias="0.6" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCoinPriceList"
+        android:id="@+id/rvSpecList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="4dp"
@@ -28,7 +54,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchNews"
+        app:layout_constraintTop_toBottomOf="@id/icon_profile"
         tools:listitem="@layout/item_specialists_info" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/back_5" />
+                app:srcCompat="@drawable/back_stack" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/alata"
             android:padding="20dp"
-            android:text="Специализация"
+            android:text="Стек технологий"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,11 +53,11 @@
             android:fontFamily="@font/alata"
             android:padding="10dp"
 
-            android:text="BI-аналитик, аналитик данных"
+            android:text="Автоматизация проектирования технических систем"
             android:textSize="20sp"
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvPersonalInfoUser"
             tools:ignore="MissingConstraints" />
@@ -83,11 +83,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="DevOps-инженер"
+            android:text="Информационная безопасность"
             android:textSize="20sp"
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_1"
             tools:ignore="MissingConstraints" />
@@ -113,11 +113,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Аналитик"
+            android:text="Микросервисная архитектура"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_2"
             tools:ignore="MissingConstraints" />
@@ -145,9 +145,9 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Арт-директор, креативный директор"
+            android:text="Основы UI/UX"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_3"
             tools:ignore="MissingConstraints" />
@@ -177,7 +177,7 @@
             android:layout_marginEnd="20dp"
             android:text="Бизнес-аналитик"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_4"
             tools:ignore="MissingConstraints" />
@@ -205,9 +205,9 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Гейм-дизайнер"
+            android:text="Android SDK"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_5"
             tools:ignore="MissingConstraints" />
@@ -233,11 +233,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Дата-сайентист"
+            android:text="C++"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_6"
             tools:ignore="MissingConstraints" />
@@ -265,9 +265,9 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Дизайнер, художник"
+            android:text="Java"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_7"
             tools:ignore="MissingConstraints" />
@@ -293,11 +293,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="SRE-специалист"
+            android:text="CI/CD"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_8"
             tools:ignore="MissingConstraints" />
@@ -323,11 +323,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Менеджер продукта"
+            android:text="Cucumber"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_9"
             tools:ignore="MissingConstraints" />
@@ -355,10 +355,10 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Методолог"
+            android:text="Python"
 
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_10"
             tools:ignore="MissingConstraints" />
@@ -384,11 +384,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Программист, разработчик"
+            android:text="Grafana"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_11"
             tools:ignore="MissingConstraints" />
@@ -416,9 +416,9 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Продуктовый аналитик"
+            android:text="Git"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_12"
             tools:ignore="MissingConstraints" />
@@ -446,9 +446,9 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Руководитель группы разработки"
+            android:text="HTML, CSS"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_13"
             tools:ignore="MissingConstraints" />
@@ -476,9 +476,9 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Руководитель отдела аналитики"
+            android:text="Jenkins"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_14"
             tools:ignore="MissingConstraints" />
@@ -506,9 +506,9 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Руководитель проектов"
+            android:text="Kafka"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_15"
             tools:ignore="MissingConstraints" />
@@ -536,9 +536,9 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Сетевой инженер"
+            android:text="Kotlin"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_16"
             tools:ignore="MissingConstraints" />
@@ -564,11 +564,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Системный администратор"
+            android:text="SQL"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_17"
             tools:ignore="MissingConstraints" />
@@ -594,11 +594,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Системный аналитик"
+            android:text="QA"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_18"
             tools:ignore="MissingConstraints" />
@@ -625,11 +625,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Системный инженер"
+            android:text="Spring"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_19"
             tools:ignore="MissingConstraints" />
@@ -656,11 +656,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Специалист по информационной безопасности"
+            android:text="Django"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_20"
             tools:ignore="MissingConstraints" />
@@ -686,11 +686,11 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Специалист технической поддержки"
+            android:text="Figma"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_21"
             tools:ignore="MissingConstraints" />
@@ -719,9 +719,9 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"
-            android:text="Тестировщик"
+            android:text="Swift"
             android:textSize="20sp"
-            
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_22"
             tools:ignore="MissingConstraints" />
@@ -752,9 +752,9 @@
             android:button="@drawable/image_checkbox"
             android:fontFamily="@font/alata"
             android:padding="10dp"
-            android:text="Технический директор (СТО)"
+            android:text="Linux"
             android:textSize="20sp"
-            
+
             app:layout_constraintBottom_toTopOf="@id/btNextInRegSpecializationUser"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gray_23"
@@ -770,6 +770,7 @@
             android:backgroundTint="#17F1D7"
             android:fontFamily="sans-serif-medium"
             android:text="@string/button_info_next"
+            android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

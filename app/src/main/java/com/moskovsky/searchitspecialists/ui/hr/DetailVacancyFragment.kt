@@ -1,4 +1,4 @@
-package com.moskovsky.searchitspecialists.ui
+package com.moskovsky.searchitspecialists.ui.hr
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ProfileUserFragment.newInstance] factory method to
+ * Use the [DetailVacancyFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ProfileUserFragment : Fragment() {
+class DetailVacancyFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,7 +35,7 @@ class ProfileUserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_user, container, false)
+        return inflater.inflate(R.layout.fragment_detail_vacancy, container, false)
     }
 
     companion object {
@@ -45,12 +45,12 @@ class ProfileUserFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfileUserFragment.
+         * @return A new instance of fragment DetailVacancyFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ProfileUserFragment().apply {
+            DetailVacancyFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

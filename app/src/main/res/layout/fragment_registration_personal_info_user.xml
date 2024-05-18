@@ -15,7 +15,9 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@android:color/transparent"
             tools:ignore="MissingConstraints">
 
@@ -52,6 +54,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="4dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvPersonalInfoUser"
             app:layout_constraintVertical_chainStyle="packed"
@@ -75,6 +78,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="4dp"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/til_name_user"
@@ -90,6 +95,31 @@
                 android:inputType="textCapWords" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_tg_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="4dp"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_surname_user"
+            app:startIconDrawable="@drawable/baseline_tg_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_tg_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alata"
+
+                android:hint="Telegram"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_age_user"
@@ -100,8 +130,10 @@
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toStartOf="@id/til_age_experience_user"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_surname_user"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_8"
             app:layout_constraintWidth_default="spread"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
+
             app:startIconDrawable="@drawable/baseline_sex_24">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -121,6 +153,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/alata"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
 
             android:hint="Выбери опыт работы"
             app:layout_constraintBottom_toBottomOf="@+id/til_age_user"
@@ -151,6 +184,8 @@
             android:layout_marginBottom="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
+
             app:layout_constraintTop_toBottomOf="@id/til_age_experience_user"
             app:startIconDrawable="@drawable/baseline_location_city_24">
 
@@ -173,6 +208,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/alata"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
 
             android:hint="Выбери тип занятости"
             app:layout_constraintEnd_toEndOf="parent"
@@ -202,12 +238,12 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/alata"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
 
             android:hint="Выбери график работы"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/til_type_experience_user">
-
             <AutoCompleteTextView
                 android:id="@+id/et_chart_experience_user"
                 android:layout_width="match_parent"
@@ -221,6 +257,31 @@
                 android:text="График работы" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_description_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_chart_experience_user"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:startIconDrawable="@drawable/baseline_data_experience_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_description_user"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:fontFamily="@font/alata"
+                android:hint="Расскажите о своем опыте работы"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/btNextInRegPersonalInfoUser"
@@ -231,14 +292,193 @@
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="12dp"
             android:backgroundTint="#17F1D7"
-            android:fontFamily="@font/alata"
+            android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:text="@string/button_info_next"
+            android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_chart_experience_user" />
+            app:layout_constraintTop_toBottomOf="@id/til_description_user" />
+
+        <LinearLayout
+            android:id="@+id/sw_education"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_tg_user"
+            tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:id="@+id/listener_finish"
+                style="@style/StyleTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="Есть образование" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sb_use_listener"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkbox_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="5dp"
+            android:text="Среднее"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sw_education"
+            tools:ignore="MissingConstraints" />
+
+        <CheckBox
+            android:id="@+id/checkbox_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="5dp"
+            android:text="Среднее специальное"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_1"
+            tools:ignore="MissingConstraints" />
+
+        <CheckBox
+            android:id="@+id/checkbox_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="5dp"
+            android:text="Незаконченное высшее"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_2"
+            tools:ignore="MissingConstraints" />
+
+        <CheckBox
+            android:id="@+id/checkbox_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="5dp"
+            android:text="Бакалавр"
+            android:visibility="gone"
+
+            android:textSize="16sp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_3"
+            tools:ignore="MissingConstraints" />
+
+
+
+        <CheckBox
+            android:id="@+id/checkbox_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="5dp"
+            android:text="Магистр"
+            android:textSize="16sp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/colored_checkbox"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_4"
+            tools:ignore="MissingConstraints" />
+
+        <CheckBox
+            android:id="@+id/checkbox_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="5dp"
+            android:text="Высшее"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_5"
+            tools:ignore="MissingConstraints" />
+
+        <CheckBox
+            android:id="@+id/checkbox_7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="5dp"
+            android:text="Кандидат наук"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_6"
+            tools:ignore="MissingConstraints" />
+
+        <CheckBox
+            android:id="@+id/checkbox_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:button="@drawable/image_checkbox"
+            android:fontFamily="@font/alata"
+            android:padding="5dp"
+            android:text="Доктор наук"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/colored_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_7"
+            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.moskovsky.searchitspecialists.R
 import com.moskovsky.searchitspecialists.databinding.FragmentRegistrationCompetenciesUserBinding
-import com.moskovsky.searchitspecialists.ui.ListITSpecialistsFragment
 
 
 class RegistrationCompetenciesUserFragment : Fragment() {
@@ -25,17 +24,17 @@ class RegistrationCompetenciesUserFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showListITSpecialistsFragment()
+        showBeforeTestUserFragment()
     }
 
-    // Главный экран
-    private fun showListITSpecialistsFragment() {
-        binding.btNextCompetenciesUser.setOnClickListener {
-            launchListITSpecialistsFragment()
+    // Экран перед тестом
+    private fun showBeforeTestUserFragment() {
+        binding.btNextBeforeTest.setOnClickListener {
+            launchBeforeTestUserFragment()
         }
     }
 
-    private fun launchListITSpecialistsFragment() {
+    private fun launchBeforeTestUserFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
             .setCustomAnimations(
                 R.anim.slide_in_right,
@@ -43,7 +42,7 @@ class RegistrationCompetenciesUserFragment : Fragment() {
                 R.anim.slide_in_left,
                 R.anim.slide_out_right
             )
-            .replace(R.id.main_container, ListITSpecialistsFragment.newInstance())
+            .replace(R.id.main_container, BeforeTestUserFragment.newInstance())
             .commit()
     }
 

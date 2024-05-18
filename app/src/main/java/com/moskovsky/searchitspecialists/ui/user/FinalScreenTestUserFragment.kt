@@ -1,4 +1,4 @@
-package com.moskovsky.searchitspecialists.ui.hr
+package com.moskovsky.searchitspecialists.ui.user
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,19 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.moskovsky.searchitspecialists.R
-import com.moskovsky.searchitspecialists.databinding.FragmentRegistrationAccountHRBinding
+import com.moskovsky.searchitspecialists.databinding.FragmentFinalScreenTestUserBinding
 import com.moskovsky.searchitspecialists.ui.app.ListITSpecialistsFragment
 
-class RegistrationAccountHRFragment : Fragment() {
-    private var _binding: FragmentRegistrationAccountHRBinding? = null
-    private val binding: FragmentRegistrationAccountHRBinding
+class FinalScreenTestUserFragment : Fragment() {
+
+    private var _binding: FragmentFinalScreenTestUserBinding? = null
+    private val binding: FragmentFinalScreenTestUserBinding
         get() = _binding ?: throw RuntimeException(FRAGMENT_ERROR)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentRegistrationAccountHRBinding.inflate(inflater, container, false)
+        _binding = FragmentFinalScreenTestUserBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -27,9 +28,9 @@ class RegistrationAccountHRFragment : Fragment() {
         showListITSpecialistsFragment()
     }
 
-    // Лист специалстов
+    // Главный экран
     private fun showListITSpecialistsFragment() {
-        binding.btNextInListItSpec.setOnClickListener {
+        binding.btListItSpecialists.setOnClickListener {
             launchListITSpecialistsFragment()
         }
     }
@@ -52,9 +53,9 @@ class RegistrationAccountHRFragment : Fragment() {
     }
 
     companion object {
-        private const val FRAGMENT_ERROR = "RegistrationAccountHRFragment is null"
+        private const val FRAGMENT_ERROR = "FinalScreenTestUserFragment is null"
         fun newInstance(): Fragment {
-            return RegistrationAccountHRFragment()
+            return FinalScreenTestUserFragment()
         }
     }
 }
