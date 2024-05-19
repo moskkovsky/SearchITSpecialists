@@ -51,4 +51,12 @@
     <style name="Widget.BottomNavigationView.TransparentBackground" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="android:background">@android:color/transparent</item> <!-- Set transparent background -->
     </style>
+
+    <style name="CustomRadioButton">
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:background">@drawable/radio_button_background</item>
+        <item name="android:drawableTop">?attr/selectableItemBackground</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">10dp</item>
+    </style>
 </resources>

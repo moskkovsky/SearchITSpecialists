@@ -1,778 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <LinearLayout
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/imageView_spec"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:strokeColor="@android:color/transparent"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/back_5" />
-
-        </com.google.android.material.card.MaterialCardView>
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/tvPersonalInfoUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/alata"
-            android:padding="20dp"
             android:text="Специализация"
             android:textColor="@color/black"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageView_spec" />
+            android:layout_gravity="center" />
 
-        <CheckBox
-            android:id="@+id/checkbox_1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-
-            android:text="BI-аналитик, аналитик данных"
-            android:textSize="20sp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvPersonalInfoUser"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_1" />
-
-        <CheckBox
-            android:id="@+id/checkbox_2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="DevOps-инженер"
-            android:textSize="20sp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_1"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_2" />
-
-        <CheckBox
-            android:id="@+id/checkbox_3"
+        <RadioGroup
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Аналитик"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_2"
-            tools:ignore="MissingConstraints" />
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <View
-            android:id="@+id/gray_3"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_3" />
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:rowCount="10">
 
-        <CheckBox
-            android:id="@+id/checkbox_4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Арт-директор, креативный директор"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_3"
-            tools:ignore="MissingConstraints" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:drawableTop="@drawable/back"
+                    android:fontFamily="@font/varela"
+                    android:text="Backend"
 
-        <View
-            android:id="@+id/gray_4"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_4" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/checkbox_5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Бизнес-аналитик"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_4"
-            tools:ignore="MissingConstraints" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:drawableTop="@drawable/frontend"
+                    android:fontFamily="@font/varela"
+                    android:text="FrontEnd"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <View
-            android:id="@+id/gray_5"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_5" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/dev_2"
+                    android:fontFamily="@font/varela"
+                    android:text="DevOps"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/checkbox_6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Гейм-дизайнер"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_5"
-            tools:ignore="MissingConstraints" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/design"
+                    android:fontFamily="@font/varela"
+                    android:text="UX/UI design"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <View
-            android:id="@+id/gray_6"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_6" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/android"
+                    android:fontFamily="@font/varela"
+                    android:text="Android"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/checkbox_7"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Дата-сайентист"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_6"
-            tools:ignore="MissingConstraints" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/ios"
+                    android:fontFamily="@font/varela"
+                    android:text="IOS"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <View
-            android:id="@+id/gray_7"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_7" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/game"
+                    android:fontFamily="@font/varela"
+                    android:text="Разработка игр"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/checkbox_8"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Дизайнер, художник"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_7"
-            tools:ignore="MissingConstraints" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/qa"
+                    android:fontFamily="@font/varela"
+                    android:text="QA"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <View
-            android:id="@+id/gray_8"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_8" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/robot"
+                    android:fontFamily="@font/varela"
+                    android:text="Робототехника"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/checkbox_9"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="SRE-специалист"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_8"
-            tools:ignore="MissingConstraints" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="4"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/cyber"
+                    android:fontFamily="@font/varela"
+                    android:text="Безопасность"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <View
-            android:id="@+id/gray_9"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_9" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/ingineer"
+                    android:fontFamily="@font/varela"
+                    android:text="Инженер"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/checkbox_10"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Менеджер продукта"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_9"
-            tools:ignore="MissingConstraints" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="5"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/analys"
+                    android:fontFamily="@font/varela"
+                    android:text="Аналитик"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <View
-            android:id="@+id/gray_10"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_10" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:drawableTop="@drawable/js"
+                    android:fontFamily="@font/varela"
+                    android:text="JavaScript"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/checkbox_11"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Методолог"
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="6"
+                    android:layout_column="1"
+                    android:drawableTop="@drawable/python"
+                    android:fontFamily="@font/varela"
+                    android:text="Python"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_10"
-            tools:ignore="MissingConstraints" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:drawableTop="@drawable/ml"
+                    android:fontFamily="@font/varela"
+                    android:text="NN/ML"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <View
-            android:id="@+id/gray_11"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_11" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="7"
+                    android:layout_column="1"
+                    android:drawableTop="@drawable/java"
+                    android:fontFamily="@font/varela"
+                    android:text="Java"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/checkbox_12"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Программист, разработчик"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_11"
-            tools:ignore="MissingConstraints" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/order_2"
+                    android:fontFamily="@font/varela"
+                    android:text="Руководитель"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
-        <View
-            android:id="@+id/gray_12"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_12" />
-
-        <CheckBox
-            android:id="@+id/checkbox_13"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Продуктовый аналитик"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_12"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_13"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_13" />
-
-        <CheckBox
-            android:id="@+id/checkbox_14"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Руководитель группы разработки"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_13"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_14"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_14" />
-
-        <CheckBox
-            android:id="@+id/checkbox_15"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Руководитель отдела аналитики"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_14"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_15"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_15" />
-
-        <CheckBox
-            android:id="@+id/checkbox_16"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Руководитель проектов"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_15"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_16"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_16" />
-
-        <CheckBox
-            android:id="@+id/checkbox_17"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Сетевой инженер"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_16"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_17"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_17" />
-
-        <CheckBox
-            android:id="@+id/checkbox_18"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Системный администратор"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_17"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_18"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_18" />
-
-        <CheckBox
-            android:id="@+id/checkbox_19"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Системный аналитик"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_18"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_19"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_19" />
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="8"
+                    android:layout_column="1"
+                    android:drawableTop="@drawable/hr"
+                    android:fontFamily="@font/varela"
+                    android:text="HR"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
 
-        <CheckBox
-            android:id="@+id/checkbox_20"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Системный инженер"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_19"
-            tools:ignore="MissingConstraints" />
+            </GridLayout>
+            <Button
+                android:id="@+id/btNextInRegSpecializationUser"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="#17F1D7"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="Продолжить" />
+        </RadioGroup>
 
-        <View
-            android:id="@+id/gray_20"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_20" />
-
-
-        <CheckBox
-            android:id="@+id/checkbox_21"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Специалист по информационной безопасности"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_20"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_21"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_21" />
-
-        <CheckBox
-            android:id="@+id/checkbox_22"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Специалист технической поддержки"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_21"
-            tools:ignore="MissingConstraints" />
-
-        <View
-            android:id="@+id/gray_22"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_22" />
-
-
-        <CheckBox
-            android:id="@+id/checkbox_23"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:text="Тестировщик"
-            android:textSize="20sp"
-            
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_22"
-            tools:ignore="MissingConstraints" />
-
-
-        <View
-            android:id="@+id/gray_23"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_23" />
-
-
-        <CheckBox
-            android:id="@+id/checkbox_24"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:text="Технический директор (СТО)"
-            android:textSize="20sp"
-            
-            app:layout_constraintBottom_toTopOf="@id/btNextInRegSpecializationUser"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_23"
-            tools:ignore="MissingConstraints" />
-
-        <Button
-            android:id="@+id/btNextInRegSpecializationUser"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#17F1D7"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/button_info_next"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

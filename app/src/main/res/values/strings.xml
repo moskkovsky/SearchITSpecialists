@@ -23,23 +23,21 @@
     <string name="textView_title_personal_info">Личные данные</string>
     <string name="button_registration_user">Sign up</string>
     <string name="textView_footer_splash">Поиск IT-специалистов</string>
-    <string-array name="experience_user">
+    <string-array name="experience_age">
         <item>Более 6 лет</item>
         <item>Нет опыта</item>
-        <item>От 3 до 6 лет</item>
-        <item>От 1 года до 3 лет</item>
+        <item>От 1 года</item>
+        <item>От 1 до 3 лет</item>
     </string-array>
-    <string-array name="type_experience">
+    <string-array name="full_exp">
         <item>Полная занятость</item>
         <item>Частичная занятость</item>
         <item>Проектная работа</item>
         <item>Стажировка</item>
         <item>Волонтерство</item>
     </string-array>
-    <string-array name="сhart_experience">
-        <item>Полный день</item>
-        <item>Сменныый график</item>
-        <item>Гибкий график</item>
-        <item>Удаленная работа</item>
+    <string-array name="office_exp">
+        <item>В офисе</item>
+        <item>Из дома</item>
     </string-array>
 </resources>

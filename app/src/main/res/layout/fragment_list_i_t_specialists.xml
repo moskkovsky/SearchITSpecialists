@@ -19,6 +19,20 @@
          />
 
     <ImageView
+        android:id="@+id/icon_filter"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:layout_constraintEnd_toStartOf="@id/icon_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/filter"
+        />
+
+
+
+    <ImageView
         android:id="@+id/icon_app"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -55,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/icon_profile"
-        tools:listitem="@layout/item_specialists_info" />
+        tools:listitem="@layout/item_vacancy_info" />
 
 
 
