@@ -45,7 +45,7 @@
                     android:drawableTop="@drawable/back"
                     android:fontFamily="@font/varela"
                     android:text="Backend"
-
+                    android:id="@+id/rbBack"
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -59,6 +59,7 @@
                     android:drawableTop="@drawable/frontend"
                     android:fontFamily="@font/varela"
                     android:text="FrontEnd"
+                    android:id="@+id/rbFront"
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -72,6 +73,7 @@
                     android:drawableTop="@drawable/dev_2"
                     android:fontFamily="@font/varela"
                     android:text="DevOps"
+                    android:id="@+id/rbDevops"
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -86,6 +88,8 @@
                     android:drawableTop="@drawable/design"
                     android:fontFamily="@font/varela"
                     android:text="UX/UI design"
+                    android:id="@+id/rbDesign"
+
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -99,6 +103,8 @@
                     android:drawableTop="@drawable/android"
                     android:fontFamily="@font/varela"
                     android:text="Android"
+                    android:id="@+id/rbAndroid"
+
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -113,6 +119,8 @@
                     android:drawableTop="@drawable/ios"
                     android:fontFamily="@font/varela"
                     android:text="IOS"
+                    android:id="@+id/rbIos"
+
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -126,6 +134,8 @@
                     android:drawableTop="@drawable/game"
                     android:fontFamily="@font/varela"
                     android:text="Разработка игр"
+                    android:id="@+id/rbGame"
+
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -140,6 +150,8 @@
                     android:drawableTop="@drawable/qa"
                     android:fontFamily="@font/varela"
                     android:text="QA"
+                    android:id="@+id/rbQA"
+
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -153,6 +165,8 @@
                     android:drawableTop="@drawable/robot"
                     android:fontFamily="@font/varela"
                     android:text="Робототехника"
+                    android:id="@+id/rbRobot"
+
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -167,6 +181,7 @@
                     android:drawableTop="@drawable/cyber"
                     android:fontFamily="@font/varela"
                     android:text="Безопасность"
+                    android:id="@+id/rbSecurity"
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -180,6 +195,7 @@
                     android:drawableTop="@drawable/ingineer"
                     android:fontFamily="@font/varela"
                     android:text="Инженер"
+                    android:id="@+id/rbEngineer"
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -194,6 +210,8 @@
                     android:drawableTop="@drawable/analys"
                     android:fontFamily="@font/varela"
                     android:text="Аналитик"
+                    android:id="@+id/rbAnal"
+
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -206,6 +224,8 @@
                     android:drawableTop="@drawable/js"
                     android:fontFamily="@font/varela"
                     android:text="JavaScript"
+                    android:id="@+id/rbJavaScript"
+
                     android:layout_marginTop="10dp"
                     android:textAlignment="center"
                     android:textStyle="bold" />
@@ -219,6 +239,8 @@
                     android:drawableTop="@drawable/python"
                     android:fontFamily="@font/varela"
                     android:text="Python"
+                    android:id="@+id/rbPython"
+
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:textAlignment="center"
@@ -233,6 +255,8 @@
                     android:drawableTop="@drawable/ml"
                     android:fontFamily="@font/varela"
                     android:text="NN/ML"
+                    android:id="@+id/rbML"
+
                     android:layout_marginTop="10dp"
                     android:textAlignment="center"
                     android:textStyle="bold" />
@@ -246,6 +270,7 @@
                     android:drawableTop="@drawable/java"
                     android:fontFamily="@font/varela"
                     android:text="Java"
+                    android:id="@+id/rbJava"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:textAlignment="center"
@@ -261,6 +286,7 @@
                     android:drawableTop="@drawable/order_2"
                     android:fontFamily="@font/varela"
                     android:text="Руководитель"
+                    android:id="@+id/rbOrder"
                     android:textAlignment="center"
                     android:textStyle="bold" />
 
@@ -273,6 +299,7 @@
                     android:drawableTop="@drawable/hr"
                     android:fontFamily="@font/varela"
                     android:text="HR"
+                    android:id="@+id/rbHR"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:textAlignment="center"
