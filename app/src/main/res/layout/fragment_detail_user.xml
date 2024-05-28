@@ -1,14 +1,387 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.user.DetailUserFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/iv_spec_photo_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@android:color/transparent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="450dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/selfie" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <ImageView
+            android:id="@+id/iv_logo_like"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/like"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_item_name"
+            app:layout_constraintEnd_toEndOf="@+id/iv_spec_photo_info"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_name" />
+
+        <ImageView
+            android:id="@+id/iv_logo_share"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/sharee"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_item_name"
+            app:layout_constraintEnd_toStartOf="@+id/iv_logo_like"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_name" />
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="6dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:outlineAmbientShadowColor="@android:color/black"
+            android:outlineProvider="bounds"
+            android:outlineSpotShadowColor="@android:color/black"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Backend"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_spec_photo_info"
+            app:layout_constraintEnd_toEndOf="@id/iv_spec_photo_info"
+            app:layout_constraintStart_toStartOf="@id/iv_spec_photo_info" />
+
+        <TextView
+            android:id="@+id/tv_spec_name_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Антон Московский, "
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_spec_photo_info" />
+
+        <TextView
+            android:id="@+id/tv_spec_age_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="10dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="21"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tv_spec_name_info"
+            app:layout_constraintTop_toBottomOf="@id/iv_spec_photo_info" />
+
+        <ImageView
+            android:id="@+id/iv_logo_geop"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/geop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spec_name_info" />
+
+
+        <TextView
+            android:id="@+id/tv_spec_city_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Москва"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_logo_geop"
+            app:layout_constraintStart_toEndOf="@id/iv_logo_geop"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo_geop" />
+
+
+        <ImageView
+            android:id="@+id/iv_logo_tg"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/tg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spec_city_info" />
+
+        <TextView
+            android:id="@+id/tv_spec_tg_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="moskkovsky"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_logo_tg"
+            app:layout_constraintStart_toEndOf="@id/iv_logo_tg"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo_tg" />
+
+        <View
+            android:id="@+id/gray_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spec_tg_info" />
+
+        <TextView
+            android:id="@+id/tv_spec_description_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gray_1" />
+
+        <View
+            android:id="@+id/gray_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spec_description_info" />
+
+
+        <ImageView
+            android:id="@+id/iv_logo_exp_age"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/exp_age"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_3" />
+
+        <TextView
+            android:id="@+id/tv_spec_exp_age_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Более 6 лет"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_logo_exp_age"
+            app:layout_constraintStart_toEndOf="@id/iv_logo_exp_age"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo_exp_age" />
+
+        <ImageView
+            android:id="@+id/iv_logo_educ"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/educ"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_2" />
+
+        <TextView
+            android:id="@+id/tv_spec_educ_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="РТУ МИРЭА"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_logo_educ"
+            app:layout_constraintStart_toEndOf="@id/iv_logo_educ"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo_educ" />
+
+        <View
+            android:id="@+id/gray_4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spec_exp_age_info" />
+
+
+        <View
+            android:id="@+id/gray_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spec_educ_info" />
+
+
+        <TextView
+            android:id="@+id/tv_spec_office_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="В офисе"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_logo_office"
+            app:layout_constraintStart_toEndOf="@id/iv_logo_office"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo_office" />
+
+        <ImageView
+            android:id="@+id/iv_logo_office"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/office"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_4" />
+
+
+        <View
+            android:id="@+id/gray_5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#E6E7E8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spec_office_info" />
+
+        <TextView
+            android:id="@+id/tv_spec_full_exp_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Полная занятость"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_logo_full_exp"
+            app:layout_constraintStart_toEndOf="@id/iv_logo_full_exp"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo_full_exp" />
+
+        <ImageView
+            android:id="@+id/iv_logo_full_exp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/work"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gray_5" />
+
+        <Button
+            android:id="@+id/btNextInRegSpecializationUser"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#17F1D7"
+            android:fontFamily="sans-serif-medium"
+            android:text="Пригласить на собеседование"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spec_full_exp_info" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

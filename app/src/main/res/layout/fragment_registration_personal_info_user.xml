@@ -127,13 +127,12 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toStartOf="@id/til_age_experience_user"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_8"
+            app:layout_constraintTop_toBottomOf="@+id/til_educ_user"
             app:layout_constraintWidth_default="spread"
+            android:layout_marginTop="20dp"
             app:shapeAppearanceOverlay="@style/RoundedCorners"
-
             app:startIconDrawable="@drawable/baseline_sex_24">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -320,7 +319,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="Есть образование" />
+                android:text="Есть вышее образование" />
 
             <com.kyleduo.switchbutton.SwitchButton
                 android:id="@+id/sb_use_listener"
@@ -329,156 +328,31 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/checkbox_1"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_educ_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="5dp"
-            android:text="Среднее"
-            android:textSize="16sp"
-            android:visibility="gone"
-
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:theme="@style/colored_checkbox"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sw_education"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@+id/sw_education"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:shapeAppearanceOverlay="@style/RoundedCorners"
+            app:startIconDrawable="@drawable/baseline_library_books_24">
 
-        <CheckBox
-            android:id="@+id/checkbox_2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="5dp"
-            android:text="Среднее специальное"
-            android:textSize="16sp"
-            android:visibility="gone"
-
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:theme="@style/colored_checkbox"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_1"
-            tools:ignore="MissingConstraints" />
-
-        <CheckBox
-            android:id="@+id/checkbox_3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="5dp"
-            android:text="Незаконченное высшее"
-            android:textSize="16sp"
-            android:visibility="gone"
-
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:theme="@style/colored_checkbox"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_2"
-            tools:ignore="MissingConstraints" />
-
-        <CheckBox
-            android:id="@+id/checkbox_4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="5dp"
-            android:text="Бакалавр"
-            android:visibility="gone"
-
-            android:textSize="16sp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:theme="@style/colored_checkbox"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_3"
-            tools:ignore="MissingConstraints" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_educ_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alata"
+                android:hint="Напиши ваше учебное заведение"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-
-        <CheckBox
-            android:id="@+id/checkbox_5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="5dp"
-            android:text="Магистр"
-            android:textSize="16sp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:theme="@style/colored_checkbox"
-            android:visibility="gone"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_4"
-            tools:ignore="MissingConstraints" />
-
-        <CheckBox
-            android:id="@+id/checkbox_6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="5dp"
-            android:text="Высшее"
-            android:textSize="16sp"
-            android:visibility="gone"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:theme="@style/colored_checkbox"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_5"
-            tools:ignore="MissingConstraints" />
-
-        <CheckBox
-            android:id="@+id/checkbox_7"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="5dp"
-            android:text="Кандидат наук"
-            android:textSize="16sp"
-            android:visibility="gone"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:theme="@style/colored_checkbox"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_6"
-            tools:ignore="MissingConstraints" />
-
-        <CheckBox
-            android:id="@+id/checkbox_8"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="5dp"
-            android:text="Доктор наук"
-            android:textSize="16sp"
-            android:visibility="gone"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:theme="@style/colored_checkbox"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_7"
-            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
