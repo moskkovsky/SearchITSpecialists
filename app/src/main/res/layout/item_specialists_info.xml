@@ -28,7 +28,6 @@
             android:layout_height="match_parent"
             app:srcCompat="@drawable/selfie" />
 
-
         <TextView
             android:id="@+id/tv_item_name"
             android:layout_width="wrap_content"
@@ -43,7 +42,7 @@
             android:shadowDx="2"
             android:shadowDy="2"
             android:shadowRadius="13"
-            android:text="Антон Московский"
+            android:text="Антон"
             android:textColor="@color/white"
             android:textSize="28sp"
             android:textStyle="bold"
@@ -51,6 +50,27 @@
             app:layout_constraintBottom_toTopOf="@id/tv_item_spec"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <TextView
+            android:id="@+id/tv_item_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:outlineAmbientShadowColor="@android:color/black"
+            android:outlineProvider="bounds"
+            android:outlineSpotShadowColor="@android:color/black"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Московский"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_spec"
+            app:layout_constraintStart_toEndOf="@id/tv_item_name" />
 
         <TextView
             android:id="@+id/tv_item_spec"
@@ -71,24 +91,19 @@
             android:textSize="20sp"
             android:layout_marginBottom="10dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/tvStack"
+            app:layout_constraintBottom_toTopOf="@id/techContainer"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/tvStack"
-            android:layout_width="wrap_content"
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/techContainer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:gravity="center"
-            android:padding="12dp"
-            android:text="Backend"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:background="@drawable/rounded_text"
+            app:flexWrap="wrap"
+            app:justifyContent="flex_start"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingDefaultResource" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

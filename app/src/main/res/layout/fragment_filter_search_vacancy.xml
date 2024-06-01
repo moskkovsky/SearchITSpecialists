@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/alata"
             android:padding="20dp"
-            android:text="Опубликовать вакансию"
+            android:text="Найти вакансию"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,30 +49,6 @@
                 android:inputType="textCapWords" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_description_vacancy"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="4dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:shapeAppearanceOverlay="@style/RoundedCorners"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_title_vacancy"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:startIconDrawable="@drawable/baseline_description_24">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_description_vacancy"
-                android:layout_width="match_parent"
-                android:layout_height="86dp"
-                android:fontFamily="@font/alata"
-                android:hint="Описание"
-                android:inputType="textCapWords" />
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_city_vacancy"
@@ -86,7 +62,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:shapeAppearanceOverlay="@style/RoundedCorners"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_description_vacancy"
+            app:layout_constraintTop_toBottomOf="@id/til_title_vacancy"
             app:layout_constraintVertical_chainStyle="packed"
             app:startIconDrawable="@drawable/baseline_location_city_24">
 
@@ -132,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:text="Стартап" />
-            
+
         </LinearLayout>
 
         <LinearLayout
@@ -289,7 +265,7 @@
             android:backgroundTint="#17F1D7"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:text="Опубликовать"
+            android:text="Найти"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@id/til_chart_experience_vacancy"

@@ -198,7 +198,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_type_experience_user"
+            android:id="@+id/til_full_exp_user"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
             app:layout_constraintTop_toBottomOf="@id/til_city_user">
 
             <AutoCompleteTextView
-                android:id="@+id/et_type_experience_user"
+                android:id="@+id/et_full_exp_user"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -228,7 +228,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_chart_experience_user"
+            android:id="@+id/til_office_exp_user"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -242,9 +242,9 @@
             android:hint="Выбери график работы"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_type_experience_user">
+            app:layout_constraintTop_toBottomOf="@id/til_full_exp_user">
             <AutoCompleteTextView
-                android:id="@+id/et_chart_experience_user"
+                android:id="@+id/et_office_exp_user"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -268,7 +268,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:shapeAppearanceOverlay="@style/RoundedCorners"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_chart_experience_user"
+            app:layout_constraintTop_toBottomOf="@id/til_office_exp_user"
             app:layout_constraintVertical_chainStyle="packed"
             app:startIconDrawable="@drawable/baseline_data_experience_24">
 

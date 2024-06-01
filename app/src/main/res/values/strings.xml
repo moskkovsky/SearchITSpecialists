@@ -40,4 +40,24 @@
         <item>В офисе</item>
         <item>Из дома</item>
     </string-array>
+
+    <string-array name="spec">
+        <item>Backend</item>
+        <item>Frontend</item>
+        <item>DevOps</item>
+        <item>UX/UI Design</item>
+        <item>Android</item>
+        <item>IOS</item>
+        <item>Разработка игр</item>
+        <item>QA</item>
+        <item>Робототехника</item>
+        <item>Безопасность</item>
+        <item>Инженер</item>
+        <item>Аналитик</item>
+        <item>JavaScript</item>
+        <item>Java</item>
+        <item>Руководитель</item>
+        <item>HR</item>
+
+    </string-array>
 </resources>

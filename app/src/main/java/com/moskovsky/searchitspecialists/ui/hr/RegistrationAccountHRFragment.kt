@@ -5,14 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.moskovsky.searchitspecialists.R
+import com.moskovsky.searchitspecialists.data.ApiFactory
+import com.moskovsky.searchitspecialists.data.UserRepository
 import com.moskovsky.searchitspecialists.databinding.FragmentRegistrationAccountHRBinding
+import com.moskovsky.searchitspecialists.domain.User
 import com.moskovsky.searchitspecialists.ui.app.ListITSpecialistsFragment
 
 class RegistrationAccountHRFragment : Fragment() {
+
     private var _binding: FragmentRegistrationAccountHRBinding? = null
     private val binding: FragmentRegistrationAccountHRBinding
         get() = _binding ?: throw RuntimeException(FRAGMENT_ERROR)
+
+    private val viewModel: RegistrationHRViewModel by viewModels {
+        RegistrationHRViewModelFactory(UserRepository(ApiFactory.apiService))
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,13 +33,93 @@ class RegistrationAccountHRFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        showListITSpecialistsFragment()
+        setupSaveButton()
     }
 
-    // Лист специалстов
-    private fun showListITSpecialistsFragment() {
+    private fun setupSaveButton() {
         binding.btNextInListItSpec.setOnClickListener {
-            launchListITSpecialistsFragment()
+            if (validateFields()) {
+                saveUser()
+            }
+        }
+    }
+
+    private fun validateFields(): Boolean {
+        var isValid = true
+
+        val name = binding.etNameHr.text.toString().trim()
+        val surname = binding.etSurnameHr.text.toString().trim()
+        val telegram = binding.etTgHr.text.toString().trim()
+        val email = binding.etEmailHr.text.toString().trim()
+        val password = binding.etPasswordHr.text.toString().trim()
+        val passwordProof = binding.etPasswordProofHr.text.toString().trim()
+
+        if (name.isEmpty()) {
+            binding.tilNameHr.error = "Необходимо заполнить"
+            isValid = false
+        } else {
+            binding.tilNameHr.error = null
+        }
+
+        if (surname.isEmpty()) {
+            binding.tilSurnameHr.error = "Необходимо заполнить"
+            isValid = false
+        } else {
+            binding.tilSurnameHr.error = null
+        }
+
+        if (telegram.isEmpty()) {
+            binding.tilTgHr.error = "Необходимо заполнить"
+            isValid = false
+        } else {
+            binding.tilTgHr.error = null
+        }
+
+        if (email.isEmpty()) {
+            binding.tilEmailHr.error = "Необходимо заполнить"
+            isValid = false
+        } else {
+            binding.tilEmailHr.error = null
+        }
+
+        if (password.isEmpty()) {
+            binding.tilPasswordHr.error = "Необходимо заполнить"
+            isValid = false
+        } else {
+            binding.tilPasswordHr.error = null
+        }
+
+        if (passwordProof.isEmpty()) {
+            binding.tilPasswordProofHr.error = "Необходимо заполнить"
+            isValid = false
+        } else {
+            binding.tilPasswordProofHr.error = null
+        }
+
+        if (password != passwordProof) {
+            binding.tilPasswordProofHr.error = "Пароли не совпадают"
+            isValid = false
+        } else {
+            binding.tilPasswordProofHr.error = null
+        }
+
+        return isValid
+    }
+
+    private fun saveUser() {
+        val user = User(
+            name = binding.etNameHr.text.toString().trim(),
+            surname = binding.etSurnameHr.text.toString().trim(),
+            password = binding.etPasswordHr.text.toString().trim(),
+            telegram = binding.etTgHr.text.toString().trim(),
+            email = binding.etEmailHr.text.toString().trim()
+        )
+
+        viewModel.saveUser(user) { response ->
+            if (response.isSuccessful) {
+                launchListITSpecialistsFragment()
+            } else {
+            }
         }
     }
 

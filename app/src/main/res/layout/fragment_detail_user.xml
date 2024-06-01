@@ -90,11 +90,29 @@
             android:shadowDx="2"
             android:shadowDy="2"
             android:shadowRadius="13"
-            android:text="Антон Московский, "
+            android:text="Антон"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_spec_photo_info" />
+
+        <TextView
+            android:id="@+id/tv_spec_surname_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Московский"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tv_spec_name_info"
             app:layout_constraintTop_toBottomOf="@id/iv_spec_photo_info" />
 
         <TextView
@@ -112,7 +130,7 @@
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/tv_spec_name_info"
+            app:layout_constraintStart_toEndOf="@id/tv_spec_surname_info"
             app:layout_constraintTop_toBottomOf="@id/iv_spec_photo_info" />
 
         <ImageView

@@ -27,7 +27,7 @@ class RegistrationCompetenciesUserFragment : Fragment() {
         showBeforeTestUserFragment()
     }
 
-    // Экран перед тестом
+    // Экран перед главным экраном
     private fun showBeforeTestUserFragment() {
         binding.btNextBeforeTest.setOnClickListener {
             launchBeforeTestUserFragment()
@@ -42,7 +42,7 @@ class RegistrationCompetenciesUserFragment : Fragment() {
                 R.anim.slide_in_left,
                 R.anim.slide_out_right
             )
-            .replace(R.id.main_container, BeforeTestUserFragment.newInstance())
+            .replace(R.id.main_container, FinalScreenTestUserFragment.newInstance())
             .commit()
     }
 

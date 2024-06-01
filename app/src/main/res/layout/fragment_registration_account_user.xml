@@ -87,7 +87,7 @@
             app:startIconDrawable="?android:attr/fingerprintAuthDrawable">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_user_surname"
+                android:id="@+id/et_user_password"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:fontFamily="@font/alata"
