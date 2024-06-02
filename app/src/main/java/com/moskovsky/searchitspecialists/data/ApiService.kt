@@ -32,4 +32,17 @@ interface ApiService {
 
     @GET("/user/get-by-specialist")
     suspend fun getUsersBySpecialist(@Query("specialist") specialist: String): List<User>
+
+    @GET("/vacancy/search")
+    suspend fun searchVacancies(
+        @Query("company") company: Boolean?,
+        @Query("title") title: String?,
+        @Query("description") description: String?,
+        @Query("city") city: String?,
+        @Query("specialist") specialist: String?,
+        @Query("experience") experience: String?,
+        @Query("employment_type") employmentType: String?,
+        @Query("hasHigherEducation") hasHigherEducation: Boolean?,
+        @Query("workSchedule") workSchedule: String?
+    ): Response<List<Vacancy>>
 }

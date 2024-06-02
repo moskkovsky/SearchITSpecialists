@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.moskovsky.searchitspecialists.R
 import com.moskovsky.searchitspecialists.data.ApiFactory
 import com.moskovsky.searchitspecialists.databinding.FragmentListITSpecialistsBinding
@@ -25,6 +26,15 @@ class ListITSpecialistsFragment : Fragment() {
     private val binding: FragmentListITSpecialistsBinding
         get() = _binding ?: throw RuntimeException(FRAGMENT_ERROR)
 
+    private var filterData: Bundle? = null
+
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        filterData = arguments
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,13 +45,39 @@ class ListITSpecialistsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //fetchVacancies()
-        fetchSpecialists()
+        fetchVacancies()
+     //   fetchSpecialists()
         showListAddVacancyFragment()
         showProfileFragment()
-        showFavoriteSpecialistsFragment()
-        showCategoriesFragment()
         showFilterSearchVacancyFragment()
+
+        val bottomNav = view.findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNav.selectedItemId = R.id.bottom_list_spec
+
+
+        bottomNav.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.bottom_list_spec -> {
+                    true
+                }
+                R.id.bottom_like -> {
+                    launchFavoriteSpecialistsFragment()
+                    // Здесь можно открыть фрагменты или выполнять другие действия
+                    true
+                }
+                R.id.bottom_notification -> {
+                    launchFavoriteSpecialistsFragment()
+                    // Здесь можно открыть фрагменты или выполнять другие действия
+                    true
+                }
+                R.id.bottom_categories -> {
+                    launchCategoriesFragment()
+                    // Здесь можно открыть фрагменты или выполнять другие действия
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
     // Profile
@@ -69,7 +105,6 @@ class ListITSpecialistsFragment : Fragment() {
             launchAddVacancyFragment()
         }
     }
-
     private fun launchAddVacancyFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
             .setCustomAnimations(
@@ -84,11 +119,7 @@ class ListITSpecialistsFragment : Fragment() {
     }
 
     //  Favorite
-    private fun showFavoriteSpecialistsFragment() {
-        binding.favorite.setOnClickListener {
-            launchFavoriteSpecialistsFragment()
-        }
-    }
+
 
     private fun launchFavoriteSpecialistsFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
@@ -104,11 +135,6 @@ class ListITSpecialistsFragment : Fragment() {
     }
 
     //Categories
-    private fun showCategoriesFragment() {
-        binding.categories.setOnClickListener {
-            launchCategoriesFragment()
-        }
-    }
 
     private fun launchCategoriesFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
@@ -143,7 +169,7 @@ class ListITSpecialistsFragment : Fragment() {
             .commit()
     }
 
-    private fun fetchSpecialists() {
+   /* private fun fetchSpecialists() {
         lifecycleScope.launch {
             val response = ApiFactory.apiService.getAllUsers()
             if (response.isSuccessful) {
@@ -152,19 +178,27 @@ class ListITSpecialistsFragment : Fragment() {
                 binding.rvSpecList.adapter = SpecialistsAdapter(specialists)
             }
         }
-    }
+    }*/
 
 
-    /*private fun fetchVacancies() {
+    private fun fetchVacancies() {
+        val title = filterData?.getString("title")
+        val city = filterData?.getString("city")
+        val spec = filterData?.getString("spec")
+        val ageExperience = filterData?.getString("ageExperience")
+        val chartExperience = filterData?.getString("chartExperience")
+        val typeExperience = filterData?.getString("typeExperience")
+        val hasCompany = filterData?.getBoolean("hasCompany")
+        val hasHigherEducation = filterData?.getBoolean("hasHigherEducation")
         lifecycleScope.launch {
-            val response = ApiFactory.apiService.getAllVacancies()
+            val response = ApiFactory.apiService.searchVacancies(true, "", "", city, spec, ageExperience, "", true, "")
             if (response.isSuccessful) {
                 val vacancies = response.body() ?: emptyList()
                 binding.rvSpecList.layoutManager = LinearLayoutManager(context)
                 binding.rvSpecList.adapter = VacancyAdapter(vacancies)
             }
         }
-    }*/
+    }
 
     companion object {
         private const val FRAGMENT_ERROR = "ListITSpecialistsFragment is null"

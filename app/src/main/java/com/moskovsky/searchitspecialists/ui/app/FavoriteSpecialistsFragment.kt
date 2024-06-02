@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.moskovsky.searchitspecialists.R
 import com.moskovsky.searchitspecialists.data.ApiFactory
 import com.moskovsky.searchitspecialists.databinding.FragmentFavoriteSpecialistsBinding
 import com.moskovsky.searchitspecialists.domain.FavoriteHR
@@ -38,7 +40,79 @@ class FavoriteSpecialistsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         fetchFavorites()
+
+        val bottomNav = view.findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        bottomNav.selectedItemId = R.id.bottom_like
+
+
+        bottomNav.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.bottom_list_spec -> {
+                    launchListITSpecialistsFragment()
+                    true
+                }
+
+                R.id.bottom_like -> {
+                    launchFavoriteSpecialistsFragment()
+                    true
+                }
+
+                R.id.bottom_notification -> {
+                    launchFavoriteSpecialistsFragment()
+                    true
+                }
+
+                R.id.bottom_categories -> {
+                    launchCategoriesFragment()
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
+
+    private fun launchListITSpecialistsFragment() {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .setCustomAnimations(
+                R.anim.slide_in_right,
+                R.anim.slide_out_left,
+                R.anim.slide_in_left,
+                R.anim.slide_out_right
+            )
+            .replace(R.id.main_container, ListITSpecialistsFragment.newInstance())
+            .addToBackStack(null)
+            .commit()
+    }
+    private fun launchFavoriteSpecialistsFragment() {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .setCustomAnimations(
+                R.anim.slide_in_right,
+                R.anim.slide_out_left,
+                R.anim.slide_in_left,
+                R.anim.slide_out_right
+            )
+            .replace(R.id.main_container, FavoriteSpecialistsFragment.newInstance())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    //Categories
+
+    private fun launchCategoriesFragment() {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .setCustomAnimations(
+                R.anim.slide_in_right,
+                R.anim.slide_out_left,
+                R.anim.slide_in_left,
+                R.anim.slide_out_right
+            )
+            .replace(R.id.main_container, CategoriesFragment.newInstance())
+            .addToBackStack(null)
+            .commit()
+    }
+
 
     private fun fetchFavorites() {
         val apiService = ApiFactory.apiService

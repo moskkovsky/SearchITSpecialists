@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.moskovsky.searchitspecialists.R
 import com.moskovsky.searchitspecialists.databinding.FragmentCategoriesBinding
 import com.moskovsky.searchitspecialists.databinding.FragmentCategoriesSpecialistsBinding
@@ -45,6 +46,7 @@ class CategoriesSpecialistsFragment : Fragment() {
         val adapter = CategoriesSpecialistsAdapter(books)
         binding.rvSpecList.layoutManager = LinearLayoutManager(requireContext())
         binding.rvSpecList.adapter = adapter
+
     }
 
     companion object {
