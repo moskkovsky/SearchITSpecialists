@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvPersonalInfoUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alata"
+            android:text="Специализация"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_gravity="center" />
+
+        <RadioGroup
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/radioGroup"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:rowCount="10">
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:drawableTop="@drawable/back"
+                    android:fontFamily="@font/varela"
+                    android:text="Backend"
+                    android:id="@+id/rbBack"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:drawableTop="@drawable/frontend"
+                    android:fontFamily="@font/varela"
+                    android:text="FrontEnd"
+                    android:id="@+id/rbFront"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/dev_2"
+                    android:fontFamily="@font/varela"
+                    android:text="DevOps"
+                    android:id="@+id/rbDevops"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/design"
+                    android:fontFamily="@font/varela"
+                    android:text="UX/UI design"
+                    android:id="@+id/rbDesign"
+
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/android"
+                    android:fontFamily="@font/varela"
+                    android:text="Android"
+                    android:id="@+id/rbAndroid"
+
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/ios"
+                    android:fontFamily="@font/varela"
+                    android:text="IOS"
+                    android:id="@+id/rbIos"
+
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/game"
+                    android:fontFamily="@font/varela"
+                    android:text="Разработка игр"
+                    android:id="@+id/rbGame"
+
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/qa"
+                    android:fontFamily="@font/varela"
+                    android:text="QA"
+                    android:id="@+id/rbQA"
+
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/robot"
+                    android:fontFamily="@font/varela"
+                    android:text="Робототехника"
+                    android:id="@+id/rbRobot"
+
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="4"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/cyber"
+                    android:fontFamily="@font/varela"
+                    android:text="Безопасность"
+                    android:id="@+id/rbSecurity"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/ingineer"
+                    android:fontFamily="@font/varela"
+                    android:text="Инженер"
+                    android:id="@+id/rbEngineer"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="5"
+                    android:layout_column="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/analys"
+                    android:fontFamily="@font/varela"
+                    android:text="Аналитик"
+                    android:id="@+id/rbAnal"
+
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:drawableTop="@drawable/js"
+                    android:fontFamily="@font/varela"
+                    android:text="JavaScript"
+                    android:id="@+id/rbJavaScript"
+
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="6"
+                    android:layout_column="1"
+                    android:drawableTop="@drawable/python"
+                    android:fontFamily="@font/varela"
+                    android:text="Python"
+                    android:id="@+id/rbPython"
+
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:drawableTop="@drawable/ml"
+                    android:fontFamily="@font/varela"
+                    android:text="NN/ML"
+                    android:id="@+id/rbML"
+
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="7"
+                    android:layout_column="1"
+                    android:drawableTop="@drawable/java"
+                    android:fontFamily="@font/varela"
+                    android:text="Java"
+                    android:id="@+id/rbJava"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/order_2"
+                    android:fontFamily="@font/varela"
+                    android:text="Руководитель"
+                    android:id="@+id/rbOrder"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    style="@style/CustomRadioButton"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:layout_row="8"
+                    android:layout_column="1"
+                    android:drawableTop="@drawable/hr"
+                    android:fontFamily="@font/varela"
+                    android:text="HR"
+                    android:id="@+id/rbHR"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+
+            </GridLayout>
+            <Button
+                android:id="@+id/btNextInRegSpecializationUser"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="#17F1D7"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="Продолжить" />
+        </RadioGroup>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivImagePhotoIT"
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image_description"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/selfie" />
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:outlineAmbientShadowColor="@android:color/black"
+            android:outlineProvider="bounds"
+            android:outlineSpotShadowColor="@android:color/black"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Антон"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_spec"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:outlineAmbientShadowColor="@android:color/black"
+            android:outlineProvider="bounds"
+            android:outlineSpotShadowColor="@android:color/black"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Московский"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_spec"
+            app:layout_constraintStart_toEndOf="@id/tv_item_name" />
+
+        <TextView
+            android:id="@+id/tv_item_spec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:clipToOutline="true"
+            android:fontFamily="@font/alata"
+            android:outlineAmbientShadowColor="@android:color/black"
+            android:outlineProvider="bounds"
+            android:outlineSpotShadowColor="@android:color/black"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="13"
+            android:text="Backend"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/techContainer"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/techContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:flexWrap="wrap"
+            app:justifyContent="flex_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingDefaultResource" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

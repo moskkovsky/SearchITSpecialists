@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_list_spec"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Главный экран" />
+
+    <item
+        android:id="@+id/bottom_categories"
+        android:icon="@drawable/baseline_category_24"
+        android:title="Категории" />
+
+    <item
+        android:id="@+id/bottom_like"
+        android:icon="@drawable/baseline_favorite_24"
+        android:title="Избранное" />
+
+
+    <item
+        android:id="@+id/bottom_notification"
+        android:icon="@drawable/round_notifications_24"
+        android:title="Уведомления" />
+
+
+</menu>
