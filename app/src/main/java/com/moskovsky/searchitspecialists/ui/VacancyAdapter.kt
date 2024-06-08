@@ -3,6 +3,7 @@ package com.moskovsky.searchitspecialists.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.moskovsky.searchitspecialists.R
 import com.moskovsky.searchitspecialists.databinding.ItemVacancyInfoBinding
 import com.moskovsky.searchitspecialists.domain.Vacancy
 
@@ -29,6 +30,17 @@ class VacancyAdapter(private val vacancies: List<Vacancy>) : RecyclerView.Adapte
             binding.tvExpAge.text = vacancy.experience
             binding.tvCash.text = "120.000₽" // предполагаемое поле зарплаты
             binding.tvDescription.text = vacancy.description
+
+            val imageResource = when (vacancy.specialist) {
+                "Android" -> R.drawable.vac_android
+                "IOS" -> R.drawable.vac_ios
+                "Backend" -> R.drawable.vac_devops
+                "UX/UI Design" -> R.drawable.figma
+                "Java" -> R.drawable.vac_java
+                "QA" -> R.drawable.vac_qa
+                else -> R.drawable.figma
+            }
+            binding.imageViewFigma.setImageResource(imageResource)
         }
     }
 }

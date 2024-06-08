@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import com.moskovsky.searchitspecialists.R
 import com.moskovsky.searchitspecialists.data.ApiFactory.apiService
 import com.moskovsky.searchitspecialists.databinding.FragmentDetailUserBinding
 import com.moskovsky.searchitspecialists.domain.FavoriteHR
@@ -71,7 +73,19 @@ class DetailUserFragment : Fragment() {
             binding.ivLogoLike.setOnClickListener {
                 saveFavorite(user)
             }
+            val imageResource = when (user.name) {
+                "Алексей" -> R.drawable.alek
+                "Павел" -> R.drawable.pavel
+                "Мария" -> R.drawable.selfie
+                "Анна" -> R.drawable.anna
+                "Виктория" -> R.drawable.vika
+                "Елена" -> R.drawable.elena
+                "Юлия" -> R.drawable.julia
+                else -> R.drawable.selfie
+            }
+            binding.imageDetail.setImageResource(imageResource)
         }
+
 
     }
 
@@ -92,6 +106,8 @@ class DetailUserFragment : Fragment() {
             employmentType = user.employmentType,
             selectedTechnologies = user.selectedTechnologies
         )
+
+
 
         val call = apiService.saveFavorite(favorite)
         call.enqueue(object : Callback<Void> {

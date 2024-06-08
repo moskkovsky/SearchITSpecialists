@@ -1,5 +1,6 @@
 package com.moskovsky.searchitspecialists.ui.hr
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,14 +9,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.moskovsky.searchitspecialists.R
 import com.moskovsky.searchitspecialists.data.ApiFactory
+import com.moskovsky.searchitspecialists.data.SharedPreferencesManager
 import com.moskovsky.searchitspecialists.data.UserRepository
 import com.moskovsky.searchitspecialists.databinding.FragmentRegistrationAccountHRBinding
 import com.moskovsky.searchitspecialists.domain.User
+import com.moskovsky.searchitspecialists.domain.UserSession
 import com.moskovsky.searchitspecialists.ui.app.ListITSpecialistsFragment
 
 class RegistrationAccountHRFragment : Fragment() {
 
     private var _binding: FragmentRegistrationAccountHRBinding? = null
+
+    private lateinit var sharedPreferencesManager: SharedPreferencesManager
+
     private val binding: FragmentRegistrationAccountHRBinding
         get() = _binding ?: throw RuntimeException(FRAGMENT_ERROR)
 
@@ -28,6 +34,7 @@ class RegistrationAccountHRFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRegistrationAccountHRBinding.inflate(inflater, container, false)
+        sharedPreferencesManager = SharedPreferencesManager(requireContext())
         return binding.root
     }
 
@@ -117,10 +124,20 @@ class RegistrationAccountHRFragment : Fragment() {
 
         viewModel.saveUser(user) { response ->
             if (response.isSuccessful) {
+                sharedPreferencesManager.email = user.email
+                sharedPreferencesManager.role = "ROLE_ADMIN"
                 launchListITSpecialistsFragment()
             } else {
             }
         }
+    }
+
+    private fun saveToSharedPreferences(email: String, role: String) {
+        val sharedPreferences = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("email", email)
+        editor.putString("role", role)
+        editor.apply()
     }
 
     private fun launchListITSpecialistsFragment() {

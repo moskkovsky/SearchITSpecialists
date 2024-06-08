@@ -45,4 +45,26 @@ interface ApiService {
         @Query("hasHigherEducation") hasHigherEducation: Boolean?,
         @Query("workSchedule") workSchedule: String?
     ): Response<List<Vacancy>>
+
+    @GET("/user/search")
+    suspend fun searchUsers(
+        @Query("name") name: String? = null,
+        @Query("surname") surname: String? = null,
+        @Query("password") password: String? = null,
+        @Query("telegram") telegram: String? = null,
+        @Query("age") age: String? = null,
+        @Query("experience") experience: String? = null,
+        @Query("city") city: String? = null,
+        @Query("education") education: String? = null,
+        @Query("email") email: String? = null,
+        @Query("hasHigherEducation") hasHigherEducation: Boolean? = null,
+        @Query("workSchedule") workSchedule: String? = null,
+        @Query("experienceDescription") experienceDescription: String? = null,
+        @Query("employmentType") employmentType: String? = null,
+        @Query("specialist") specialist: String? = null,
+        @Query("selectedTechnologies") selectedTechnologies: List<String>? = null
+    ): Response<List<User>>
+
+    @GET("/user/get-by-email")
+    suspend fun getUserByEmail(@Query("email") email: String): Response<User>
 }

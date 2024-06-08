@@ -51,6 +51,18 @@ class SpecialistsAdapter(
             binding.tvItemSurname.text = specialist.surname
             binding.tvItemSpec.text = specialist.specialist
 
+            val imageResource = when (specialist.name) {
+                "Алексей" -> R.drawable.alek
+                "Павел" -> R.drawable.pavel
+                "Мария" -> R.drawable.selfie
+                "Анна" -> R.drawable.anna
+                "Виктория" -> R.drawable.vika
+                "Елена" -> R.drawable.elena
+                "Юлия" -> R.drawable.julia
+                else -> R.drawable.selfie
+            }
+            binding.ivImagePhotoIT.setImageResource(imageResource)
+
 
             binding.techContainer.removeAllViews() // Удаляем предыдущие технологии
 

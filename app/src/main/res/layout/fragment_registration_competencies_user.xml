@@ -215,38 +215,7 @@
             app:layout_constraintTop_toBottomOf="@id/gray_5"
             tools:ignore="MissingConstraints" />
 
-        <View
-            android:id="@+id/gray_6"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:background="#E6E7E8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_6" />
 
-        <CheckBox
-            android:id="@+id/checkbox_7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/alata"
-            android:padding="10dp"
-            android:textColor="@color/white"
-            android:text="Способен управлять своим временем, выстраивать и реализовывать траекторию саморазвития"
-            android:textSize="18sp"
-            android:lineSpacingExtra="4dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintBottom_toTopOf="@id/btNextBeforeTest"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gray_6"
-            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/btNextBeforeTest"
@@ -263,7 +232,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/checkbox_7" />
+            app:layout_constraintTop_toBottomOf="@id/checkbox_6" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

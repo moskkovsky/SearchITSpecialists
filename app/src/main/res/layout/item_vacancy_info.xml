@@ -79,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
+                android:id="@+id/imageView_figma"
                 app:srcCompat="@drawable/figma" />
 
         </com.google.android.material.card.MaterialCardView>

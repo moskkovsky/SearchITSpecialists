@@ -235,7 +235,6 @@
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/alata"
             app:shapeAppearanceOverlay="@style/RoundedCorners"
-
             android:hint="Выбери график работы"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -251,7 +250,6 @@
                 android:paddingBottom="16dp"
                 android:text="График работы" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
 
         <Button

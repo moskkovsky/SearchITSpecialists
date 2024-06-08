@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.moskovsky.searchitspecialists.R
 import com.moskovsky.searchitspecialists.data.ApiFactory
+import com.moskovsky.searchitspecialists.data.SharedPreferencesManager
 import com.moskovsky.searchitspecialists.data.UserRepository
 import com.moskovsky.searchitspecialists.databinding.FragmentRegistrationStackUserBinding
 import com.moskovsky.searchitspecialists.domain.User
@@ -23,6 +24,8 @@ class RegistrationStackUserFragment : Fragment() {
     private val viewModel: RegistrationStackViewModel by viewModels {
         RegistrationStackViewModelFactory(UserRepository(ApiFactory.apiService))
     }
+
+    private lateinit var sharedPreferencesManager: SharedPreferencesManager
 
     private var selectedTechnologies: List<String>? = null
     private var name: String? = null
@@ -45,6 +48,7 @@ class RegistrationStackUserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRegistrationStackUserBinding.inflate(inflater, container, false)
+        sharedPreferencesManager = SharedPreferencesManager(requireContext())
         return binding.root
     }
 
@@ -136,13 +140,15 @@ class RegistrationStackUserFragment : Fragment() {
     private fun saveUser(user: User) {
         viewModel.saveUser(user) { response ->
             if (response.isSuccessful) {
-                launchListITSpecialistsFragment()
+                sharedPreferencesManager.email = user.email
+                sharedPreferencesManager.role = "ROLE_USER"
+                launchRegistrationCompetenciesUserFragment()
             } else {
             }
         }
     }
 
-    private fun launchListITSpecialistsFragment() {
+    private fun launchRegistrationCompetenciesUserFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
             .setCustomAnimations(
                 R.anim.slide_in_right,
@@ -150,7 +156,7 @@ class RegistrationStackUserFragment : Fragment() {
                 R.anim.slide_in_left,
                 R.anim.slide_out_right
             )
-            .replace(R.id.main_container, ListITSpecialistsFragment.newInstance())
+            .replace(R.id.main_container, RegistrationCompetenciesUserFragment.newInstance())
             .commit()
     }
 

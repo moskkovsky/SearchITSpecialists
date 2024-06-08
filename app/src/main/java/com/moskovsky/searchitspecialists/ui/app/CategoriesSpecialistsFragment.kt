@@ -7,11 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.moskovsky.searchitspecialists.R
-import com.moskovsky.searchitspecialists.databinding.FragmentCategoriesBinding
 import com.moskovsky.searchitspecialists.databinding.FragmentCategoriesSpecialistsBinding
-import com.moskovsky.searchitspecialists.databinding.FragmentProfileBinding
 import com.moskovsky.searchitspecialists.domain.User
 
 class CategoriesSpecialistsFragment : Fragment() {
